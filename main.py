@@ -16,10 +16,6 @@ from discord import app_commands
 # setx DISCORD_TOKEN "SEU_TOKEN_NOVO_AQUI"
 # Depois feche e abra o terminal de novo.
 TOKEN = os.getenv("DISCORD_TOKEN")
-print("DISCORD_TOKEN carregou?", "SIM" if TOKEN else "NÃO")  # debug
-
-if not TOKEN:
-    raise RuntimeError("DISCORD_TOKEN não encontrado nas variáveis de ambiente.")
 # =========================================================
 # CONFIG
 # =========================================================
