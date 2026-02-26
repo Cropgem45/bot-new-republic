@@ -1170,4 +1170,4 @@ async def log(interaction: discord.Interaction):
 # =========================================================
 if not TOKEN:
     raise RuntimeError("DISCORD_TOKEN não encontrado no Render.")
-bot.run(TOKEN)
+bot.run("MTQ3NTQ5NzgxMjE5MDk1NzY4MA.G7H61J.nJaP66zpMepqxgeMqZzKykCz1XqcgOqLZkHGpk")
