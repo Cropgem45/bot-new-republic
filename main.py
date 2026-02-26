@@ -15,8 +15,11 @@ from discord import app_commands
 # ✅ No Windows (PowerShell):
 # setx DISCORD_TOKEN "SEU_TOKEN_NOVO_AQUI"
 # Depois feche e abra o terminal de novo.
-TOKEN = os.getenv("MTQ3NTQ5NzgxMjE5MDk1NzY4MA.G7H61J.nJaP66zpMepqxgeMqZzKykCz1XqcgOqLZkHGpk")
+TOKEN = os.getenv("DISCORD_TOKEN")
+print("DISCORD_TOKEN carregou?", "SIM" if TOKEN else "NÃO")  # debug
 
+if not TOKEN:
+    raise RuntimeError("DISCORD_TOKEN não encontrado nas variáveis de ambiente.")
 # =========================================================
 # CONFIG
 # =========================================================
@@ -1169,4 +1172,6 @@ async def log(interaction: discord.Interaction):
 # =========================================================
 # START
 # =========================================================
+if not TOKEN:
+    raise RuntimeError("DISCORD_TOKEN não encontrado no Render.")
 bot.run(TOKEN)
